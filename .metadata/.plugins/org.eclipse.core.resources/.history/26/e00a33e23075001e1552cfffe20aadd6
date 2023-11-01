@@ -1,0 +1,21 @@
+package ec.com.learning.restassured.restfulbooker;
+
+import static io.restassured.RestAssured.given;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class HealthCheckTest extends BaseTest {
+
+	@Test
+	public void healthCheckTest() {
+		given().spec(spec).when().get("/ping").then().assertThat().statusCode(201);
+	}
+
+	@Test
+	public void heathersAndCoockiesTest() {
+		Response response = RestAssured.given(spec).get("/ping");
+	}
+}

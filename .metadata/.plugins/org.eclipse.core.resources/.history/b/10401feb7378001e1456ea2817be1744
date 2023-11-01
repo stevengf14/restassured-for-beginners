@@ -1,0 +1,5 @@
+package ec.com.learning.restassured.restfulbooker;
+
+public class Bookingid {
+
+}

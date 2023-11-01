@@ -1,0 +1,12 @@
+package ec.com.learning.restassured.restfulbooker;
+
+public class Booking {
+
+	String firstname;
+	String lastname;
+	int totalprice;
+	boolean depositpaid;
+
+	String additionalneeds;
+
+}

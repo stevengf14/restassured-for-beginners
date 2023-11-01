@@ -1,0 +1,8 @@
+package ec.com.learning.restassured.restfulbooker;
+
+public class Bookingdates {
+
+	private String checkin;
+	private String checkout;
+
+}

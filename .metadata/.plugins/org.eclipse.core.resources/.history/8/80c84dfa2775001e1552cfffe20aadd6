@@ -1,0 +1,20 @@
+package ec.com.learning.restassured.restfulbooker;
+
+import org.testng.annotations.Test;
+
+import io.restassured.response.Response;
+
+public class DeleteBookingTests {
+
+	@Test
+	public void deleteBookingTest() {
+		// Create Booking
+		Response responseCreate = createBooking();
+		responseCreate.print();
+
+		// Get bookingid of new booking
+		int bookingid = responseCreate.jsonPath().getInt("bookingid");
+
+		// Delete booking
+	}
+}

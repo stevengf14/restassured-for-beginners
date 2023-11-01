@@ -1,0 +1,18 @@
+package ec.com.learning.restassured.restfulbooker;
+
+import org.testng.annotations.Test;
+
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.specification.RequestSpecification;
+
+import static io.restassured.RestAssured.*;
+
+public class HealthCheckTest {
+
+	@Test
+	public void healthCheckTest() {
+		RequestSpecification spec = new RequestSpecBuilder().setBaseUri("https://restful-booker.herokuapp.com").build();
+
+		given().spec(spec).when().get("/ping").then().assertThat().statusCode(201);
+	}
+}

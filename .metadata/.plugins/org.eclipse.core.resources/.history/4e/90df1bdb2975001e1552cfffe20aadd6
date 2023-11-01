@@ -1,0 +1,17 @@
+package ec.com.learning.restassured.restfulbooker;
+
+import org.testng.annotations.Test;
+
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.specification.RequestSpecification;
+
+import static io.restassured.RestAssured.*;
+
+public class HealthCheckTest extends BaseTest {
+
+	@Test
+	public void healthCheckTest() {
+
+		given().spec(spec).when().get("/ping").then().assertThat().statusCode(201);
+	}
+}
